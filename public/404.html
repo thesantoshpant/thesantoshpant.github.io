@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Redirecting…</title>
+    <!--
+      SPA fallback for GitHub Pages. This is a single-page site, so any unknown
+      path simply redirects back to the root. Preserves the query string (e.g.
+      ?filter=full-stack) and hash so deep links keep working.
+    -->
+    <script>
+      (function () {
+        var base = "/";
+        var target = base + window.location.search + window.location.hash;
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/">the homepage</a>…</p>
+  </body>
+</html>

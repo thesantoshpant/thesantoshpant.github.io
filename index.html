@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0A0E14" />
+
+    <!-- Resolve theme before first paint (no flash). Default dark; honor a stored
+         choice, else the OS prefers-color-scheme. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var dark = stored
+            ? stored === "dark"
+            : !window.matchMedia("(prefers-color-scheme: light)").matches;
+          document.documentElement.classList.toggle("dark", dark);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", dark ? "#0A0E14" : "#F7F9FB");
+        } catch (e) {}
+      })();
+    </script>
+
+    <title>Santosh Pant — Software Engineer & Geospatial-ML Researcher</title>
+    <meta
+      name="description"
+      content="Santosh Pant builds software and researches geospatial machine learning. CS + Data Science at Knox College, Break Through Tech AI Fellow at Cornell Tech, first-author paper under review at ACM SIGSPATIAL 2026."
+    />
+    <link rel="canonical" href="https://thesantoshpant.github.io/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Santosh Pant — Software Engineer & Geospatial-ML Researcher" />
+    <meta
+      property="og:description"
+      content="I build software and research geospatial machine learning. Open to 2027 new-grad software and geospatial-ML roles."
+    />
+    <meta property="og:url" content="https://thesantoshpant.github.io/" />
+    <meta property="og:image" content="https://thesantoshpant.github.io/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Santosh Pant — Software Engineer & Geospatial-ML Researcher" />
+    <meta
+      name="twitter:description"
+      content="I build software and research geospatial machine learning."
+    />
+    <meta name="twitter:image" content="https://thesantoshpant.github.io/og.svg" />
+
+    <!-- Fonts: preconnect + single combined stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Santosh Pant",
+        "url": "https://thesantoshpant.github.io/",
+        "jobTitle": "Software Engineer & Geospatial-ML Researcher",
+        "email": "mailto:spant@knox.edu",
+        "alumniOf": "Knox College",
+        "sameAs": [
+          "https://github.com/thesantoshpant",
+          "https://www.linkedin.com/in/the-santosh-pant"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
