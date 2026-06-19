@@ -21,9 +21,15 @@ export function Projects() {
         </div>
       </Reveal>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+      {/* flex-wrap + justify-center keeps a partial last row centered (5 cards ->
+          a symmetric 3-2), regardless of how many the active filter shows. */}
+      <div className="flex flex-wrap justify-center gap-8">
         {visible.map((project, index) => (
-          <Reveal key={project.slug} delay={index * 0.05}>
+          <Reveal
+            key={project.slug}
+            delay={index * 0.05}
+            className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]"
+          >
             <ProjectCard project={project} />
           </Reveal>
         ))}

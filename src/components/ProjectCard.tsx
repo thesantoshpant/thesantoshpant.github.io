@@ -13,7 +13,7 @@ export function ProjectCard({ project }: { project: Project }) {
   const showThumb = Boolean(project.thumb) && !thumbFailed;
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-card border border-hairline bg-surface transition-colors duration-300 hover:border-accent">
+    <article className="flex h-full flex-col overflow-hidden rounded-card border border-hairline bg-surface transition-colors duration-300 hover:border-accent">
       {showThumb ? (
         <img
           src={`${import.meta.env.BASE_URL}thumbs/${project.thumb}`}
