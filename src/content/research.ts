@@ -10,14 +10,14 @@ export const research: ResearchItem[] = [
     title: "Satellite Heat-Stress Forecasting — Nepal Terai",
     status: "Under review / ACM SIGSPATIAL 2026",
     description:
-      "Early-season vegetation heat-stress pipeline over 21 Terai rice districts (Google Earth Engine, 59,793 pixel-years); honest finding — previous-year persistence beats fold-safe XGBoost (macro-F1 0.476 vs 0.362) under year-blocked, leave-one-district-out evaluation.",
+      "Early-season vegetation heat-stress pipeline over 21 Terai rice districts (Google Earth Engine, 59,793 pixel-years); honest finding — previous-year persistence beats a tuned 15-feature XGBoost (macro-F1 0.476 vs 0.362) under year-blocked, leave-one-district-out evaluation.",
     link: {
       label: "live app terai-heat-forecaster.streamlit.app",
       href: "https://terai-heat-forecaster.streamlit.app",
     },
   },
   {
-    title: "scaleshift-bench — Frozen Features Often Match Fine-Tuning",
+    title: "Frozen Features Often Match Fine-Tuning — Geospatial Foundation Models",
     status: "Under review / TMLR 2026",
     description:
       "Controlled evaluation of geospatial foundation models (Prithvi-EO-2.0, TerraMind) for field-extent segmentation across six countries (Fields of The World): a frozen decoder is statistically equivalent to full fine-tuning in 9 of 12 cells at ~110× fewer parameters, and proxy land-cover labels inflate weak baselines by up to +0.34 AUROC.",
