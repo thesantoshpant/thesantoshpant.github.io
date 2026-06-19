@@ -43,7 +43,7 @@ export function Hero() {
           </h1>
           <p className="max-w-3xl font-body text-lg leading-relaxed text-secondary">
             CS + Data Science at Knox College, graduating 2027. Break Through Tech AI Fellow at
-            Cornell Tech. First-author paper under review at ACM SIGSPATIAL 2026.
+            Cornell Tech. Three first-author papers under review (SIGSPATIAL, TMLR).
           </p>
         </Reveal>
       </div>
