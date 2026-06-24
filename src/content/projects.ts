@@ -1,4 +1,4 @@
-import { Search, CandlestickChart, Sprout, Languages, GraduationCap } from "lucide-react";
+import { Search, CandlestickChart, Network, Sprout, Languages, GraduationCap } from "lucide-react";
 import type { Project } from "../types";
 
 /** Accurate project content — synced to the Description/ dossiers + résumés (2026-06-18). */
@@ -20,6 +20,15 @@ export const projects: Project[] = [
     description:
       "A from-scratch crypto order-matching engine in Go — a real limit-order book (price-time priority, partial fills, self-trade prevention) benchmarked at ~4.2M orders/sec, wrapped in a full trading platform: pre-trade risk, P&L, event sourcing with deterministic replay, a FIX 4.4 gateway, live WebSocket data, and a React trading terminal.",
     links: [{ label: "Live", href: "https://theoms.vercel.app" }],
+  },
+  {
+    slug: "raven",
+    title: "RAVEN — Context Passports for Multi-Agent AI",
+    icon: Network,
+    tags: ["Full-stack", "LLM"],
+    description:
+      "A context compressor for multi-agent AI: instead of dumping your whole memory into every agent, it gives each one only the facts its role needs — about 80–90% fewer tokens, with every standing rule preserved. Runs as a live Fetch.ai agent and an MCP server. Built solo at UC Berkeley CalHacks.",
+    links: [{ label: "GitHub", href: "https://github.com/thesantoshpant/raven" }],
   },
   {
     slug: "cropscan",
