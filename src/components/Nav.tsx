@@ -10,10 +10,11 @@ const SECTION_IDS = site.nav.map((item) => item.href.replace("#", ""));
 /** Sticky top nav: transparent → frosted on scroll, with active-section tracking. */
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  // No section is highlighted on the hero; only a real #hash pre-selects one.
   const [active, setActive] = useState<string>(() => {
-    if (typeof window === "undefined") return "work";
+    if (typeof window === "undefined") return "";
     const hash = window.location.hash.replace("#", "");
-    return SECTION_IDS.includes(hash) ? hash : "work";
+    return SECTION_IDS.includes(hash) ? hash : "";
   });
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -32,11 +33,19 @@ export function Nav() {
         // Among sections crossing the centre band, highlight the most-visible one
         // (picking the max ratio is order-independent, unlike taking the last entry).
         const intersecting = entries.filter((entry) => entry.isIntersecting);
-        if (intersecting.length === 0) return;
-        const mostVisible = intersecting.reduce((a, b) =>
-          b.intersectionRatio > a.intersectionRatio ? b : a,
-        );
-        setActive(mostVisible.target.id);
+        if (intersecting.length > 0) {
+          const mostVisible = intersecting.reduce((a, b) =>
+            b.intersectionRatio > a.intersectionRatio ? b : a,
+          );
+          setActive(mostVisible.target.id);
+          return;
+        }
+        // Nothing in the band: if the viewport centre is back above the first section
+        // (i.e. on the hero), clear the highlight instead of keeping a stale one.
+        const first = document.getElementById(SECTION_IDS[0]);
+        if (first && window.scrollY + window.innerHeight / 2 < first.offsetTop) {
+          setActive("");
+        }
       },
       { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
     );
