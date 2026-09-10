@@ -21,8 +21,8 @@ export default function App() {
       <main id="main">
         <span id="top" aria-hidden="true" />
         <Hero />
-        <Projects />
         <Research />
+        <Projects />
         <About />
         <Skills />
         <Achievements />

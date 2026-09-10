@@ -39,11 +39,12 @@ export function Hero() {
       <div className="mx-auto flex w-full max-w-content flex-1 items-center px-6 pb-24 pt-[120px]">
         <Reveal className="flex max-w-4xl flex-col gap-6">
           <h1 className="font-display text-[40px] font-bold leading-[1.1] tracking-tight text-primary md:text-[72px] md:leading-[1.05]">
-            I build software and research geospatial machine learning.
+            I research geospatial machine learning and build the software around it.
           </h1>
           <p className="max-w-3xl font-body text-lg leading-relaxed text-secondary">
-            CS + Data Science at Knox College, graduating 2027. Break Through Tech AI Fellow at
-            Cornell Tech. Three first-author papers under review (SIGSPATIAL, TMLR).
+            CS + Data Science senior at Knox College, graduating June 2027. Break Through Tech AI
+            Fellow at Cornell Tech. Two first-author papers accepted in 2026 (TMLR, ACM SIGSPATIAL),
+            three more under review. Applying to PhD programs for Fall 2027.
           </p>
         </Reveal>
       </div>

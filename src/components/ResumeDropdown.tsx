@@ -77,7 +77,7 @@ export function ResumeDropdown() {
         onClick={() => setOpen((value) => !value)}
         className="flex items-center gap-1.5 rounded-chip border border-accent px-4 py-2 font-mono text-xs uppercase tracking-eyebrow text-accent transition-colors hover:bg-hover"
       >
-        Resume
+        CV / Resume
         <ChevronDown
           size={14}
           aria-hidden="true"
@@ -88,7 +88,7 @@ export function ResumeDropdown() {
       {open && (
         <div
           id={panelId}
-          aria-label="Resume downloads"
+          aria-label="CV and resume downloads"
           onKeyDown={onPanelKeyDown}
           className="absolute right-0 z-50 mt-2 w-60 overflow-hidden rounded-chip border border-hairline bg-surface"
         >

@@ -15,7 +15,7 @@ export function Contact() {
       <div className="mx-auto flex max-w-content flex-col items-center gap-8 px-6 text-center">
         <Reveal className="flex flex-col items-center gap-6">
           <p className="font-display text-3xl font-semibold tracking-tight text-primary md:text-[40px]">
-            Open to 2027 software and geospatial-ML roles.
+            Applying to PhD programs for Fall 2027. Glad to talk research or software.
           </p>
           <a
             href={`mailto:${site.email}`}

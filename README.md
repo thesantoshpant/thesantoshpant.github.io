@@ -37,7 +37,7 @@ not the components:
 
 ### Résumés
 
-`public/santosh-swe.pdf` and `public/santosh-geo.pdf` are **placeholders** — replace
+`public/Pant_Santosh_CV.pdf` (PhD CV, default) and `public/santosh-swe.pdf` (software resume) are the downloads. Replace
 them with the real PDFs (same filenames) and the Resume dropdown picks them up
 automatically.
 

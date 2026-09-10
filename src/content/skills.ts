@@ -1,18 +1,18 @@
 import type { SkillGroup } from "../types";
 
-/** Verbatim content from the spec §4. */
+/** Research-first ordering (2026-09-09). Only tools actually used in the work above. */
 export const skillGroups: SkillGroup[] = [
   {
-    label: "Languages",
-    skills: ["Python", "TypeScript", "JavaScript", "Go", "Java", "SQL", "R"],
-  },
-  {
-    label: "Frontend",
-    skills: ["React", "Next.js", "Tailwind CSS"],
-  },
-  {
-    label: "Backend",
-    skills: ["Node.js/Express", "FastAPI", "Flask", "PostgreSQL", "MongoDB", "Redis"],
+    label: "Geospatial & Remote Sensing",
+    skills: [
+      "Google Earth Engine",
+      "Rasterio",
+      "geopandas",
+      "Sentinel-1/2, MODIS, Landsat, PlanetScope",
+      "ERA5, CHIRPS, ESA WorldCover",
+      "EO foundation models (Prithvi, TerraMind, Clay, AnySat)",
+      "drone RGB and thermal imagery",
+    ],
   },
   {
     label: "ML / AI",
@@ -20,24 +20,32 @@ export const skillGroups: SkillGroup[] = [
       "PyTorch",
       "scikit-learn",
       "XGBoost",
-      "computer vision (CNNs, CLIP, YOLO)",
+      "LightGBM",
+      "computer vision (CNNs, U-Net, CLIP, YOLO)",
       "LLM APIs",
       "Hugging Face",
     ],
   },
   {
-    label: "Geospatial & Remote Sensing",
+    label: "Methods",
     skills: [
-      "Google Earth Engine",
-      "Rasterio",
-      "geopandas",
-      "MODIS/Landsat/Sentinel/PlanetScope",
-      "ERA5",
-      "EO foundation models",
+      "conformal prediction",
+      "leakage-aware spatial and temporal evaluation",
+      "equivalence testing (TOST)",
+      "bootstrap and seed-matched reporting",
+      "preregistration and adversarial self-review",
     ],
   },
   {
+    label: "Languages",
+    skills: ["Python", "R", "TypeScript", "JavaScript", "Go", "Java", "SQL"],
+  },
+  {
+    label: "Backend & Frontend",
+    skills: ["FastAPI", "Flask", "Node.js/Express", "PostgreSQL", "MongoDB", "Redis", "React", "Next.js", "Tailwind CSS"],
+  },
+  {
     label: "DevOps",
-    skills: ["Docker", "AWS", "CI/CD", "Git", "Linux"],
+    skills: ["Docker", "AWS", "GCP", "CI/CD", "Git", "Linux"],
   },
 ];

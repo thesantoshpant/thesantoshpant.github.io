@@ -6,7 +6,7 @@ export const site = {
   name: "Santosh Pant",
   /** mono wordmark in the nav (lowercase by design). */
   wordmark: "santosh pant",
-  role: "Software Engineer & Geospatial-ML Researcher",
+  role: "Geospatial-ML Researcher and Software Engineer",
   email: "spant@knox.edu",
 
   // Canonical deploy URL (GitHub user site). Update if the handle changes.
@@ -18,15 +18,16 @@ export const site = {
     npm: "https://www.npmjs.com/package/bhasha-js",
   },
 
+  /** First entry is the default download (the PhD CV); the second is the software resume. */
   resumes: [
-    { label: "For software roles", href: "/santosh-swe.pdf" },
-    { label: "For geospatial-ML roles", href: "/santosh-geo.pdf" },
+    { label: "Curriculum vitae (PhD)", href: "/Pant_Santosh_CV.pdf" },
+    { label: "Resume (software)", href: "/santosh-swe.pdf" },
   ],
 
-  /** Anchored nav items (single-page). */
+  /** Anchored nav items (single-page). Research first: the site is PhD-facing. */
   nav: [
-    { label: "Work", href: "#work" },
     { label: "Research", href: "#research" },
+    { label: "Work", href: "#work" },
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
     { label: "Contact", href: "#contact" },
