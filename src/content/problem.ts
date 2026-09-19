@@ -1,0 +1,9 @@
+/** "The problem" section. Three paragraphs; [n] tokens link to the publication entries. */
+export const problem = [
+  "A model that reads satellite images is only as trustworthy as the labels it was checked against. In the United States and Europe those labels exist. There are parcel registries, crop declarations, yield monitors on combines, and dense station networks. Global map products and geospatial foundation models are built and scored mostly against that kind of data. Most of the world has far less of it.",
+  "Nepal's Terai is a clear case. Official paddy statistics come out by district, months after harvest. The monsoon hides most of the growing season under cloud. A model can score well on a global benchmark and nobody can say whether it works here, because there is so little to check it against. Most of my papers are about that gap. They ask what a reported number still means when the labels are proxies, the split leaks, or the baseline was weak.",
+  "The Terai is the northern edge of the Indo-Gangetic Plain. The same rice and wheat system continues across the border into Bihar and Uttar Pradesh, and on to Punjab and Bangladesh. It is farmed mostly by smallholders and it feeds several hundred million people. I start there because I know what the ground looks like, and that helps most when the labels are wrong. The questions are not specific to farmland. [3] asks them of drone thermal imagery over cities, and [4] was tested on flood and sea-ice data.",
+];
+
+export const mapCaption =
+  "Nepal's Terai districts on the northern edge of the Indo-Gangetic Plain. Kanchanpur, my home district, is marked.";
