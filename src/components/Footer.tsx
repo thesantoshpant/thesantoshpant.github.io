@@ -16,7 +16,7 @@ export function Closing() {
           Email is the fastest way to reach me: <a href={`mailto:${site.email}`}>{site.email}</a>.
         </p>
         <p className="links">
-          <a href={site.links.cv}>CV (PDF)</a>
+          {site.showCv && <a href={site.links.cv}>CV (PDF)</a>}
           <a href={site.links.scholar}>Google Scholar</a>
           <a href={site.links.github}>GitHub</a>
           <a href={site.links.linkedin}>LinkedIn</a>

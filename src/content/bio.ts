@@ -14,8 +14,9 @@ export const bio = [
 /** The email address is inserted between these two parts as a mailto link. */
 export const callout = {
   before: "If you are taking PhD students for Fall 2027 and any of the work below is close to yours, please email me at ",
-  after:
-    ". My CV is linked above, and the code and artifacts for both accepted papers are public. Drafts of the papers under review are available on request.",
+  after: site.showCv
+    ? ". My CV is linked above, and the code and artifacts for both accepted papers are public. Drafts of the papers under review are available on request."
+    : ". My CV is available on request, and the code and artifacts for both accepted papers are public. Drafts of the papers under review are available on request.",
 };
 
 /** Shown under the callout in small type. [n] tokens link to the publication entries. */

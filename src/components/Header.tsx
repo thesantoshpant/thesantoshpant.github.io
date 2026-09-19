@@ -1,4 +1,4 @@
-import { site } from "../content/site";
+import { site, navItems } from "../content/site";
 import { titleLine, bio, callout, upcoming } from "../content/bio";
 import { rich } from "../refs";
 
@@ -13,7 +13,7 @@ export function Header() {
           {site.name}
         </a>
         <span className="nav-links">
-          {site.nav.map((item) => (
+          {navItems.map((item) => (
             <a key={item.href} href={item.href}>
               {item.label}
             </a>
@@ -37,7 +37,7 @@ export function Header() {
             <a href={site.links.scholar}>Google Scholar</a>
             <a href={site.links.github}>GitHub</a>
             <a href={site.links.orcid}>ORCID</a>
-            <a href={site.links.cv}>CV (PDF)</a>
+            {site.showCv && <a href={site.links.cv}>CV (PDF)</a>}
           </p>
         </div>
       </div>

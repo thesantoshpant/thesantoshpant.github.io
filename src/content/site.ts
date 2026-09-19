@@ -4,6 +4,9 @@ export const site = {
   email: "spant@knox.edu",
   url: "https://thesantoshpant.github.io/",
 
+  /** When false, the three "CV (PDF)" links are not rendered and the callout says the CV is available on request. */
+  showCv: false as boolean,
+
   links: {
     github: "https://github.com/thesantoshpant",
     scholar: "https://scholar.google.com/citations?user=HqD-KE8AAAAJ",
@@ -41,3 +44,6 @@ export const site = {
   /** Shown in the footer. Update when the page content changes. */
   updated: "September 2026",
 } as const;
+
+/** Nav items to render: the CV entry only when showCv is true. */
+export const navItems = site.nav.filter((item) => site.showCv || item.href !== site.links.cv);
