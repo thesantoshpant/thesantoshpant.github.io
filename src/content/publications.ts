@@ -57,17 +57,6 @@ export const publications: Publication[] = [
       "The diagnostic is identically zero for any crop-invariant predictor. Calibrated on Sen1Floods11; on a 17-acquisition sea-ice benchmark the model trained on per-patch labels shows a positive alignment contrast against a scene-label control in all 17 folds.",
     links: [],
   },
-  {
-    id: 5,
-    status: "Under review",
-    title: "Deciding when a locally trained cropland model should overrule a global map product",
-    authors: "",
-    venue: "",
-    note: "Single author. Workshop paper under review. Draft available on request.",
-    summary:
-      "Metric-specific break-even conditions for letting a local Sentinel-2 model edit ESA WorldCereal over Nepal's Terai. Conclusions flip between F0.5 and F2, and blind edits move F1 in both directions across seven datasets, so a stratified label screen is proposed before editing.",
-    links: [],
-  },
 ];
 
 /** Research that is not (yet) a paper. One entry per project: what, who with, where presented. */

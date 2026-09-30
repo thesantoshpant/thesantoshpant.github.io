@@ -16,7 +16,7 @@ export const directions: Direction[] = [
   {
     lead: "Transfer across regions and local correction of global maps.",
     body:
-      "When a locally trained model disagrees with a global product such as ESA WorldCereal, when should the local model win? [5] works this out for cropland in the Terai.",
+      "When a locally trained model disagrees with a global product such as ESA WorldCereal, when should the local model win? I am working this out for cropland in the Terai.",
   },
 ];
 

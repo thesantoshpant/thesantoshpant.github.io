@@ -30,7 +30,7 @@ Edit these files, not the components.
 | `src/content/site.ts` | name, email, links, the confirming pages behind linked names and awards, nav, the "Updated" date |
 | `src/content/bio.ts` | title line, intro paragraphs, the PhD callout, the upcoming line, the teaching line |
 | `src/content/problem.ts` | "The problem" section and the map caption |
-| `src/content/publications.ts` | publications [1] to [5] and the "Other research" entries |
+| `src/content/publications.ts` | publications [1] to [4] and the "Other research" entries |
 | `src/content/directions.ts` | the three research directions, the "What I want to work on next" paragraph, and the current-work paragraph |
 | `src/content/software.ts` | the three software entries |
 | `src/content/honors.ts` | the honors lines and the News lines |
