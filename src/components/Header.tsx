@@ -1,4 +1,4 @@
-import { site, navItems } from "../content/site";
+import { site } from "../content/site";
 import { titleLine, bio, callout, upcoming } from "../content/bio";
 import { rich } from "../refs";
 
@@ -13,7 +13,7 @@ export function Header() {
           {site.name}
         </a>
         <span className="nav-links">
-          {navItems.map((item) => (
+          {site.nav.map((item) => (
             <a key={item.href} href={item.href}>
               {item.label}
             </a>
@@ -34,10 +34,10 @@ export function Header() {
           <p className="title-line">{titleLine}</p>
           <p className="links">
             <a href={`mailto:${site.email}`}>Email</a>
+            <a href={site.links.cv}>CV</a>
             <a href={site.links.scholar}>Google Scholar</a>
             <a href={site.links.github}>GitHub</a>
             <a href={site.links.orcid}>ORCID</a>
-            {site.showCv && <a href={site.links.cv}>CV (PDF)</a>}
           </p>
         </div>
       </div>
@@ -52,7 +52,7 @@ export function Header() {
         <p>
           {callout.before}
           <a href={`mailto:${site.email}`}>{site.email}</a>
-          {callout.after}
+          {rich(callout.after)}
         </p>
       </aside>
 

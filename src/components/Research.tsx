@@ -20,7 +20,9 @@ export function Research() {
       <p>{rich(next)}</p>
 
       <h3>Current work</h3>
-      <p>{rich(currentWork)}</p>
+      {currentWork.map((paragraph) => (
+        <p key={paragraph.slice(0, 32)}>{rich(paragraph)}</p>
+      ))}
 
       <h3>Other research</h3>
       <DatedList items={otherResearch} />

@@ -6,7 +6,7 @@ export interface Link {
 export interface Publication {
   /** Citation number shown as [n] and used as the anchor id pub-n. */
   id: number;
-  status: "Accepted" | "Under review";
+  status: "Accepted" | "Manuscript";
   /** Title shown in the list. */
   title: string;
   /** Author list; empty when not shown. */

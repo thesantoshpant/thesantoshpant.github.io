@@ -11,7 +11,7 @@ function byline(pub: Publication): string {
 
 function Entry({ pub }: { pub: Publication }) {
   return (
-    <li id={`pub-${pub.id}`} className={pub.status === "Under review" ? "review" : undefined}>
+    <li id={`pub-${pub.id}`} className={pub.status === "Accepted" ? undefined : "review"}>
       <span className="pub-title">{pub.title}</span>
       <span className="pub-meta">{rich(byline(pub))}</span>
       <span className="pub-summary">{pub.summary}</span>
@@ -30,7 +30,7 @@ function Entry({ pub }: { pub: Publication }) {
 
 export function Publications() {
   const accepted = publications.filter((p) => p.status === "Accepted");
-  const underReview = publications.filter((p) => p.status === "Under review");
+  const manuscripts = publications.filter((p) => p.status === "Manuscript");
 
   return (
     <section id="publications">
@@ -43,13 +43,13 @@ export function Publications() {
         ))}
       </ol>
 
-      <h3 className="pub-group">Under review</h3>
+      <h3 className="pub-group">Manuscript</h3>
       <ol
         className="pubs"
         start={accepted.length + 1}
         style={{ counterReset: `pub ${accepted.length}` }}
       >
-        {underReview.map((pub) => (
+        {manuscripts.map((pub) => (
           <Entry key={pub.id} pub={pub} />
         ))}
       </ol>

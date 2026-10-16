@@ -1,4 +1,3 @@
-import { site } from "../content/site";
 import { software, softwareIntro } from "../content/software";
 import { rich } from "../refs";
 
@@ -24,9 +23,6 @@ export function Software() {
           </li>
         ))}
       </ul>
-      <p className="small">
-        <a href={site.links.softwareResume}>Software resume (PDF)</a>
-      </p>
     </section>
   );
 }

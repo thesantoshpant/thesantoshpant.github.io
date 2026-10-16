@@ -1,7 +1,7 @@
 import type { Dated, Publication } from "../types";
 import { site } from "./site";
 
-/** Every status word is literal: accepted, under review. */
+/** Every status word is literal: accepted, manuscript. */
 export const publications: Publication[] = [
   {
     id: 1,
@@ -36,25 +36,14 @@ export const publications: Publication[] = [
   },
   {
     id: 3,
-    status: "Under review",
-    title:
-      "An audit of how train-test overlap and per-frame temperature normalization shape RGB-to-thermal benchmark scores",
-    authors: "",
-    venue: "",
-    note: `First author, with collaborators at the University of Michigan including [Prof. Geoffrey Siwo](${site.confirm.siwo}). Under review. Draft available on request.`,
+    status: "Manuscript",
+    title: "Auditing Split Proximity and Radiometric Scale in RGB-to-Thermal Evaluation",
+    authors:
+      "Santosh Pant, Adithya Vaithinathan Asokan, Haoyun Feng, Matthew R. Dennis, Keenan Gibbons, Verrah Akinyi Otiende, and Geoffrey Siwo",
+    venue: "Manuscript, 2026.",
+    note: "Available on request.",
     summary:
       "Two training-free checks for RGB-to-thermal benchmarks. On CART, 97.8 to 100 percent of mixing-protocol test frames share a flight with a training frame, and per-frame normalization erases the physical temperature scale before scoring.",
-    links: [],
-  },
-  {
-    id: 4,
-    status: "Under review",
-    title: "A diagnostic for segmentation pipelines whose labels are fit inside each image crop",
-    authors: "",
-    venue: "",
-    note: "First author, with three Knox College co-authors. Under review. Draft available on request.",
-    summary:
-      "The diagnostic is identically zero for any crop-invariant predictor. Calibrated on Sen1Floods11; on a 17-acquisition sea-ice benchmark the model trained on per-patch labels shows a positive alignment contrast against a scene-label control in all 17 folds.",
     links: [],
   },
 ];
@@ -62,19 +51,11 @@ export const publications: Publication[] = [
 /** Research that is not (yet) a paper. One entry per project: what, who with, where presented. */
 export const otherResearch: Dated[] = [
   {
-    date: "2026",
-    text: "Satellite heat-stress classification over 21 Terai rice districts. Independent research. Under year-blocked, leave-one-district-out evaluation, previous-year persistence beat a fold-safe XGBoost ensemble (macro-F1 0.476 vs 0.362), which argues for persistence and modal-class baselines in sub-national benchmarks. [Live app](https://terai-heat-forecaster.streamlit.app).",
-  },
-  {
     date: "2024 to 2026",
-    text: "Richter Research Scholar, Knox College, four funded terms. Liquid-crystal image analysis and reaction-network benchmarking (ChemTest). The image-analysis work was given as a talk at Knox Horizons, May 2026.",
+    text: "Richter Research Scholar, Knox College, four funded terms. Liquid-crystal image analysis, given as a talk at Knox Horizons, May 2026.",
   },
   {
     date: "2025",
     text: `Structured random graphs for HPC interconnects, with [Prof. David Bunde](${site.confirm.bunde}), co-authored with Dipesh Adhikari. Presented at Knox Horizons, May 2025.`,
-  },
-  {
-    date: "2025",
-    text: "Klicker, a classroom polling platform, with Ridham Dholaria. Poster at Knox Horizons, May 2025.",
   },
 ];
